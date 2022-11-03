@@ -11,16 +11,14 @@ struct FeaturedView: View {
     @EnvironmentObject var model:RecipeModel
 
     var body: some View {
-        
-        
         VStack(alignment: .leading, spacing: 0) {
             Text("Featured Recipes")
                 .font(.largeTitle)
                 .bold()
                 .padding(.leading)
+                .padding(.top, 40)
             GeometryReader { geo in
                 TabView {
-                    
                     //loop through receipe
                     ForEach(0..<model.recipes.count) { index in
                         
